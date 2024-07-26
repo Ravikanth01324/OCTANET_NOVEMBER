@@ -1,0 +1,113 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+}
+
+/* Password Container */
+.password-container {
+    margin-bottom: 20px;
+}
+
+.password-container label {
+    font-size: 1.2em;
+    color: #333;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.password-container input {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: calc(100% - 120px);
+}
+
+.password-container button {
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    background-color: #ff6f61;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.password-container button:hover {
+    background-color: #ff3b30;
+}
+
+/* Envelope Styling */
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    border: 2px solid #ff6f61;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    transform: rotate(-2deg);
+    transition: transform 0.3s ease;
+}
+
+.envelope::before {
+    content: '';
+    position: absolute;
+    top: -25px;
+    left: 0;
+    width: 100%;
+    height: 25px;
+    background: #fff;
+    border-top: 2px solid #ff6f61;
+    border-radius: 10px 10px 0 0;
+}
+
+.envelope:hover {
+    transform: rotate(0deg);
+}
+
+/* Letter Styling */
+.letter {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 280px;
+    height: 160px;
+    background: #fff;
+    border: 2px solid #ff6f61;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.letter.show {
+    display: block;
+}
+
+.letter h2 {
+    color: #ff6f61;
+    font-size: 1.5em;
+    margin-top: 0;
+}
+
+.letter p {
+    font-size: 1em;
+    color: #333;
+    line-height: 1.6;
+}
